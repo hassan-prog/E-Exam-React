@@ -11,7 +11,7 @@ const Signup = ({ signup, isAuthenticated }) => {
     email: "",
     first_name: "",
     last_name: "",
-    profile_type: ["STD", "PRF"],
+    profile_type: "",
   });
 
   #mychange
@@ -101,15 +101,15 @@ const Signup = ({ signup, isAuthenticated }) => {
           <select
             className="form-control"
             name="profile_type"
-            value=""
-            options={[profile_type[0], profile_type[1]]}
+            value="profile_type"
+            options={["STD", "PRF"]}
             onChange={(e) => onChange(e)}
             required
           >
-            <option value={profile_type[0]} key={profile_type[0]}>
+            <option value="STD" key="STD">
               Student
             </option>
-            <option value={profile_type[1]} key={profile_type[1]}>
+            <option value="PRF" key="PRF">
               Professor
             </option>
           </select>
