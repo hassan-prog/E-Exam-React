@@ -14,6 +14,8 @@ const Signup = ({ signup, isAuthenticated }) => {
     profile_type: ["STD", "PRF"],
   });
 
+  #mychange
+
   const { username, password, email, first_name, last_name, profile_type } =
     formData;
 
