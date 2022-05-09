@@ -14,13 +14,11 @@ const Signup = ({ signup, isAuthenticated }) => {
     profile_type: "",
   });
 
-  #mychange
+ 
 
-  const { username, password, email, first_name, last_name, profile_type } =
-    formData;
+  const { username, password, email, first_name, last_name, profile_type } = formData;
 
-  const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const onChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -41,11 +39,11 @@ const Signup = ({ signup, isAuthenticated }) => {
       <h1>Sign Up</h1>
       <p>Create your Account</p>
       <form onSubmit={(e) => onSubmit(e)}>
-        <div className="form-group">
+      <div className="form-group">
           <input
             className="form-control"
             type="text"
-            placeholder="Username*"
+            placeholder="Username"
             name="username"
             value={username}
             onChange={(e) => onChange(e)}
@@ -56,7 +54,7 @@ const Signup = ({ signup, isAuthenticated }) => {
           <input
             className="form-control"
             type="password"
-            placeholder="Password*"
+            placeholder="Password"
             name="password"
             value={password}
             onChange={(e) => onChange(e)}
@@ -101,18 +99,18 @@ const Signup = ({ signup, isAuthenticated }) => {
           <select
             className="form-control"
             name="profile_type"
-            value="profile_type"
-            options={["STD", "PRF"]}
             onChange={(e) => onChange(e)}
-            required
+            required            
           >
-            <option value="STD" key="STD">
+            <option value="">--------</option>
+            <option value="STD">
               Student
             </option>
-            <option value="PRF" key="PRF">
+            <option value="PRF">
               Professor
             </option>
           </select>
+        
         </div>
         <button className="btn btn-primary" type="submit">
           Register

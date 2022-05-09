@@ -118,7 +118,7 @@ export const login = (username, password) => async (dispatch) => {
 };
 
 export const signup =
-  (first_name, last_name, email, password, username, profile_type) =>
+  (username, password, email, first_name, last_name, profile_type) =>
   async (dispatch) => {
     const config = {
       headers: {
